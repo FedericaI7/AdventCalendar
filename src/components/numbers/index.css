@@ -1,0 +1,12 @@
+.Numbers {
+  /* display: flex; */
+  /* align-items: center; */
+  /* font-size: 50px;
+  color: brown; */
+  /* gap: 40px; */
+  /* flex-wrap: wrap; */
+}
+
+.Numbers__box {
+  /* width: 300px; */
+}
