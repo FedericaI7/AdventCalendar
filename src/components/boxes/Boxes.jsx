@@ -1,15 +1,23 @@
 import "./index.css";
 import data from "/src/data.json";
-import Box from "../box/Box";
+import Gift from "../gift/Gift";
 import { useState } from "react";
 
 const Boxes = () => {
-  const [gift, setGift] = useState("");
+  const [gift, setGift] = useState(null);
+  const [textCard, setTextCard] = useState("");
+  const [giftOpen, setGiftOpen] = useState(false);
 
-  const result = data.map((x) => <Box giftToday={x.gift} key={x.id} />);
+  const sendGift = (id) => {
+    const imageData = data.filter((el) => el.id === id);
 
-  const sendGift = (value) => {
-    console.log(value);
+    if (imageData) {
+      const img = imageData[0].gift;
+      const text = imageData[0].text;
+      setGift(img);
+      setTextCard(text);
+      setGiftOpen(true);
+    }
   };
 
   return (
@@ -26,33 +34,23 @@ const Boxes = () => {
         </p>
       </div>
 
-
-
-
-      <button className="box box__1" onClick={sendGift}>
-        1
-      </button>
-      {/* <button className="box box__2" onClick={sendGift}>
-        2
-      </button>
-      <button className="box box__3" onClick={sendGift}>
-        3
-      </button>
-      <button className="box box__4" onClick={sendGift}>
-        4
-      </button>
-      <button className="box box__5" onClick={sendGift}>
-        5
-      </button>
-      <button className="box box__6" onClick={sendGift}>
-        6
-      </button>
-      <button className="box box__7" onClick={sendGift}>
-        7
-      </button>
-      <button className="box box__8" onClick={sendGift}>
-        8
-      </button> */}
+      {data.map((el) => (
+        <button
+          className={`box box__${el.id}`}
+          onClick={() => sendGift(el.id)}
+          key={el.id}
+        >
+          {el.id}
+        </button>
+      ))}
+      {gift && giftOpen && (
+        <Gift
+          giftToday={gift}
+          textToday={textCard}
+          setGiftOpen={setGiftOpen}
+          giftOpen={giftOpen}
+        />
+      )}
     </div>
   );
 };

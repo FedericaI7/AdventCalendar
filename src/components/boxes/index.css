@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap");
+
 .Boxes {
   display: grid;
   grid-template-columns: 80px repeat(12, 1fr);
-  /* grid-template-rows: repeat(6, 100px); */
-  grid-template-rows: repeat(14, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   height: 100%;
+  width: 100%;
 }
 
 .Boxes__text {
@@ -13,9 +15,75 @@
   color: rgb(71, 7, 7);
   padding: 10px;
   text-align: center;
-  max-width: 100%;
 }
 
+.Gift {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.Gift__card {
+  background-color: rgb(211, 167, 167);
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  width: 50rem;
+  overflow: auto;
+  position: relative;
+}
+
+.Gift__card p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+
+.Gift__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.Gift img {
+  width: 300px;
+  object-fit: cover;
+}
+
+/* .Gift__card {
+  display: flex;
+  position: absolute;
+  width: 50rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(211, 167, 167);
+  padding: 30px;
+  gap: 20px;
+}
+
+.Gift__close {
+  position: absolute;
+  color: red;
+  position: rela;
+  top: 100px;
+}
+
+.Gift img {
+  width: 300px;
+  object-fit: cover;
+}
+*/
 .Boxes__text h1 {
   padding-top: 10px;
   line-height: 32px;
