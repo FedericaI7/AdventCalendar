@@ -42,13 +42,10 @@ const Boxes = () => {
           style={{
             background: `url(${el.pattern})`,
             backgroundSize: "cover",
-            // backgroundBlendMode: "hue",
-            // color: "rgb(55, 255, 25)",
-
             boxShadow: "0 0 10px rgba(0, 0, 0, 0.6)",
           }}
         >
-          {el.id}
+          <p className="box__number">{el.id}</p>
         </button>
       ))}
       {gift && giftOpen && (

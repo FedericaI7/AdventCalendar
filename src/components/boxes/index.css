@@ -7,14 +7,19 @@
 }
 
 .Boxes__text {
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(167, 211, 189);
-  /* color: rgb(71, 7, 7); */
-  /* color: rgb(175, 155, 155); */
-  color: rgb(148, 143, 143);
+  background-color: rgb(93 191 193);
+  color: rgb(54 100 133);
   padding: 1.875rem;
   text-align: center;
+}
+
+.box__number {
+  background-color: rgb(49, 78, 78);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(233, 64, 98, 0.863);
+  border-radius: 1.5625rem;
+  width: 3.125rem;
 }
 
 /* Modal Card Open */
@@ -28,7 +33,7 @@
 }
 
 .Gift__card {
-  background-color: rgb(94, 131, 133);
+  background-color: rgb(93 191 193);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -68,11 +73,13 @@
 }
 
 #chris {
-  /* color: rgb(204, 142, 8); */
-  color: rgb(148, 55, 55);
+  color: rgba(233, 64, 98, 0.863);
 }
 
 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   font-size: 22px;
   border: none;
@@ -214,7 +221,7 @@
   .Boxes__text {
     grid-row: 1 / 4;
     grid-column: 1 / 5;
-    background-color: rgb(167, 211, 189);
+    background-color: rgb(93 191 193);
     padding: 0px;
     text-align: center;
   }
@@ -234,7 +241,9 @@
     justify-content: center;
   }
   .Gift__card {
-    background-color: rgb(94, 131, 133);
+    /* background-color: rgb(94, 131, 133); */
+    background-color: rgb(93 191 193);
+
     padding: 2.5rem;
     display: flex;
     align-items: flex-start;
