@@ -33,7 +33,7 @@
 }
 
 .Gift__card {
-  background-color: rgb(93 191 193);
+  background-color: rgba(93, 191, 193, 0.877);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,10 @@
   gap: 1.875rem;
   width: 50rem;
   max-width: 90%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh);
+  scrollbar-color: transparent transparent;
 }
 
 .Gift__card p {
@@ -242,7 +245,8 @@
   }
   .Gift__card {
     /* background-color: rgb(94, 131, 133); */
-    background-color: rgb(93 191 193);
+    /* background-color: rgb(93 191 193); */
+    background-color: rgba(93, 191, 193, 0.877);
 
     padding: 2.5rem;
     display: flex;
@@ -250,7 +254,7 @@
     flex-direction: row;
     gap: 1.875rem;
     width: 50rem;
-    overflow: auto;
+
     position: relative;
   }
   .Gift__close {
