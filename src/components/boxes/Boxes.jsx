@@ -39,6 +39,14 @@ const Boxes = () => {
           className={`box box__${el.id}`}
           onClick={() => sendGift(el.id)}
           key={el.id}
+          style={{
+            background: `url(${el.pattern})`,
+            backgroundSize: "cover",
+            // backgroundBlendMode: "hue",
+            // color: "rgb(55, 255, 25)",
+
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.6)",
+          }}
         >
           {el.id}
         </button>
